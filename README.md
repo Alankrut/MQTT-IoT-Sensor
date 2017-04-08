@@ -25,7 +25,7 @@ TOPIC_LIGHT = The topic this sensor should post to on the MQTT server
 FREQUENCY_LIGHT = The frequency in milliseconds at which this sensor should be polled
 ```
 
-Update `mqtt_all3.ino` to use the sensors we want.
+Update `mqtt_sensor.ino` to use the sensors we want.
 Currently 3 sensors are set up, shown bellow. 
 ```
 listSensors[0] = new MotionSensor(PIN_MOTION, topic_motion, frequency_motion, mqttClient);
