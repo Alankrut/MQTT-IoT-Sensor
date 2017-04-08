@@ -36,4 +36,4 @@ If adding an additional sensor, just make a new object at the next index of the 
 
 ## Removing Sensors
 
-Removing is done the same way as [adding a sensor](https://github.com/Alankrut/ESP8266Sensor/new/master?readme=1#adding-sensors), but by simply doing the opposite (Reduce the `MAX_SENSORS` count and remove the section in the config/code for that sensor)
+Removing is done the same way as [adding a sensor](https://github.com/Alankrut/ESP8266Sensor/tree/master#adding-sensors), but by simply doing the opposite (Reduce the `MAX_SENSORS` count and remove the section in the config/code for that sensor)
