@@ -3,7 +3,7 @@
 #include <MotionSensor.h>
 #include <MQTTClient.h>
 
-#include "config.h"
+#include "config.mine.h"
 
 MQTTClient *mqttClient;
 Sensor* listSensors[MAX_SENSORS];
