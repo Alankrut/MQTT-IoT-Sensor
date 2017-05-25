@@ -1,7 +1,12 @@
 # MQTT IoT Sensor
 
+<img src="images/sensor1.jpg" width="432"> <img src="images/sensor2.jpg" width="432">
+
 Welcome! This project is for using an ESP8266 as a MQTT based IoT sensor. It has configurations to allow you to use multiple sensors on the same microchip, these can be modified easily using config file and a simple code change.
 Included is a custom library (which you will have to import into Arduino IDE's library folder) and then the sketch will work out of the box.
+
+## The Enclosure
+In order to make things prettier, I have designed an enclosure for this project. It fits the NodeMCU perfectly and has a convenient micro usb slot for the power. The main hole will fit a PIR Motion Sensor (HC-SR501) and has airflow ducts on the top for the DHT11 temp/humidity sensor. If you're interested in this design, you can find it on [thingiverse](https://www.thingiverse.com/thing:2343271).
 
 ## Adding Sensors
 
@@ -26,7 +31,7 @@ FREQUENCY_LIGHT = The frequency in milliseconds at which this sensor should be p
 ```
 
 Update `mqtt_sensor.ino` to use the sensors we want.
-Currently 3 sensors are set up, shown bellow. 
+Currently 3 sensors are set up, shown below. 
 ```
 listSensors[0] = new MotionSensor(PIN_MOTION, topic_motion, frequency_motion, mqttClient);
 listSensors[1] = new AnalogSensor(PIN_LIGHT, topic_light, frequency_light, mqttClient);
@@ -36,4 +41,4 @@ If adding an additional sensor, just make a new object at the next index of the 
 
 ## Removing Sensors
 
-Removing is done the same way as [adding a sensor](https://github.com/Alankrut/ESP8266Sensor/tree/master#adding-sensors), but by simply doing the opposite (Reduce the `MAX_SENSORS` count and remove the section in the config/code for that sensor)
+Removing is done the same way as [adding a sensor](https://github.com/Alankrut/ESP8266Sensor/tree/master#adding-sensors), but by simply doing the opposite (make sure you also reduce the `MAX_SENSORS` count and remove the config/code for that sensor)
