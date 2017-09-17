@@ -41,6 +41,13 @@ void MQTTClient::publish(const char* topic, const char* payload, boolean retaine
   _subClient->publish(topic, payload, retained);
 }
 
+void MQTTClient::stop() {
+  if (_subClient->connected()) {
+    Serial.print("Ending MQTT connection...");
+    _subClient->disconnect();
+  }
+}
+
 void MQTTClient::loop(long timeNow) {
   _subClient->loop();
 }

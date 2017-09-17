@@ -16,6 +16,7 @@ class MQTTClient
     void setup();
     void loop(long timeNow);
     void publish(const char* topic, const char* payload, boolean retained);
+    void stop();
   private:
     WiFiClient _wifiClient;
     PubSubClient* _subClient;
